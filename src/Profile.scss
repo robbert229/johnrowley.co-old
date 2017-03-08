@@ -1,0 +1,83 @@
+@import './colors.scss';
+
+$BackgroundColor: $C5;
+$HeadingColor: $C3;
+$ParagraphColor: $C6;
+
+.profile {
+  background: $BackgroundColor;
+  padding: 0;
+  margin: 0;
+
+  &__navbar {
+    min-height: 60px;
+  }
+
+  &__container {
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+
+    &--spaced {
+      padding-top: calc(1em + 48px + 10px);
+    }
+
+    &__introduction {
+      margin-top: 2.5em;
+      text-align: center;
+
+      &__header {
+        @include typography($HeadingColor, 40px);
+      }
+
+      &__subheader {
+        @include typography($HeadingColor, 18px);
+      }
+    }
+
+    &__seperator {
+      background-color: $HeadingColor;
+    }
+
+    &__about {
+      margin-top: 2em;
+
+      &__header {
+        color: $HeadingColor;
+        @include typography($HeadingColor, 32px);
+      }
+
+      &__body {
+        @include typography($ParagraphColor, 18px);
+      }
+    }
+
+    &__photograph {
+      margin-top: 2em;
+      border-radius: 50%;
+      display: block;
+      border: 8px solid $HeadingColor;
+
+      width: 75%;
+      height: auto;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__details {
+      margin-top: 2em;
+
+      &__header {
+        @include typography($HeadingColor, 32px);
+      }
+      &__table {
+        @include typography($ParagraphColor, 18px);
+      }
+    }
+
+  }
+}

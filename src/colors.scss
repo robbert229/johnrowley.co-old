@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Volkhov');
+
+$C1: #5D445E;
+$C2: #C765B0;
+$C3: #EB8C85;
+$C4: #FAD19E;
+$C5: #221E2A;
+$C6: #F7F7F7;
+
+@mixin typography($color, $size) {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: $size;
+  font-family: 'Volkhov', serif;
+  color: $color;
+}
+
+p,h1,h2,h3,h4 {
+  font-family: 'Volkhov', serif;
+}

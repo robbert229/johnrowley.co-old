@@ -1,0 +1,28 @@
+@import './colors.scss';
+
+$HeadingColor: $C3;
+$ParagraphColor: $C5;
+$InvertedParagraphColor: $C6;
+
+.quote {
+  &__header {
+    text-align: center;
+    @include typography($HeadingColor, 40px);
+  }
+
+  &__body {
+    &__paragraph {
+      @include typography($ParagraphColor, 18px);
+
+      &--inverted {
+        color: $InvertedParagraphColor !important;
+      }
+    }
+
+    &__author {
+      &--inverted {
+        color: $HeadingColor !important;
+      }
+    }
+  }
+}

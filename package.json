@@ -1,0 +1,35 @@
+{
+  "name": "johnrowley-co",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.2",
+    "react-visibility-sensor": "^3.7.0",
+    "react-waypoint": "^5.1.0",
+    "reactstrap": "^4.2.0",
+    "vunit.js": "^0.2.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.40.0",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "0.9.3"
+  },
+  "scripts": {
+    "build-css": "node_modules/.bin/node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node_modules/.bin/node-sass src/ -o src/ --watch --recursive",
+    "flow": "node_modules/.bin/flow",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

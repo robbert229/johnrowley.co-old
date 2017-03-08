@@ -1,0 +1,70 @@
+@import './colors.scss';
+
+$HeadingColor: $C3;
+$ParagraphColor: $C5;
+$BackgroundColor: $C6;
+
+.experiences {
+  padding-top: 2.5em;
+  background: $BackgroundColor;
+
+  &__seperator {
+    margin-top: 3.5em;
+    margin-bottom: 2em;
+  }
+
+  &__subtitle {
+    @include typography($HeadingColor, 32px);
+  }
+}
+
+$ExperienceTableSubtitle: #636c72;
+$BreakPoint: 992px;
+@mixin responsive() {
+  @media screen and (max-width: $BreakPoint) {
+    display: table-row;
+    padding-top: 2em;
+  }
+}
+
+.experience-table {
+  &__table {
+    @media screen and (max-width: $BreakPoint) {
+      padding-bottom: 2em;
+      display: block;
+    }
+
+    &__headers {
+      &__title {
+        @include typography($ParagraphColor, 20px);
+        @include responsive();
+      }
+
+      &__subtitle {
+        @include typography($ParagraphColor, 18px);
+        @include responsive();
+      }
+    }
+
+    &__body {
+      &__timeframe {
+        @include typography($ExperienceTableSubtitle, 14px);
+        @include responsive();
+
+        font-weight: lighter;
+        width: 40%;
+        vertical-align: top;
+        padding-top:.50em;
+      }
+
+      &__description {
+        @include typography($ExperienceTableSubtitle, 16px);
+        @include responsive();
+
+        width: 60%;
+        padding-top: .75em;
+        padding-bottom: 1.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import './colors.scss';
+
+$HeaderText: $C6;
+
+@keyframes wiggle {
+	0% {
+		padding-top: 20px;
+	}
+
+	50% {
+		padding-top: 28px;
+	}
+
+	100% {
+		padding-top: 20px;
+	}
+}
+
+.background {
+  background: center right fixed no-repeat url('./background.gif') ;
+  background-attachment: fixed;
+
+  background-size: cover;
+  margin:0 !important;
+  padding:0 !important;
+  height: 100vh;
+
+  &__footer {
+    height: 80px;
+    width: 110px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+    background-color: $C6;
+    text-align: center;
+    z-index: 6;
+
+    &__icon {
+      color: $C5;
+      padding-top: 25px;
+      animation-name: wiggle;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+    }
+  }
+
+  &__title {
+    position: relative;
+    top: 28%;
+    text-align: center;
+
+
+    &__header {
+      color: $HeaderText;
+      font-size: 63px;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif !important;
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+      border-bottom: 1px $HeaderText solid;
+    }
+
+    &__subheader {
+      color: $HeaderText;
+      font-family: 'Open Sans', sans-serif !important;
+    }
+  }
+}
