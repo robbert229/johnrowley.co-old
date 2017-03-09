@@ -47,10 +47,7 @@ class MyNavbar extends React.Component {
               <NavLink href="#abilities">Abilities</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#projects">Projects</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#contact">Contect</NavLink>
+              <NavLink href="#contact">Contact</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
