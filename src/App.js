@@ -8,7 +8,7 @@ import Background from './Background';
 import Profile from './Profile';
 import Experiences from './Experiences';
 import Abilities from './Abilities';
-
+import Contact from './Contact';
 import './App.css';
 
 class App extends Component {
@@ -45,6 +45,7 @@ class App extends Component {
 
         <Experiences />
         <Abilities />
+        <Contact />
       </div>
     );
   }

@@ -1,0 +1,70 @@
+@import './colors.scss';
+
+$EmailColor: $C6;
+$EmailBackground: $C5;
+
+$EmailHoverColor: $C6;
+$EmailHoverBackgroundColor: $C3;
+
+$ContactsBackground: $C6;
+$ContactsColor: $C5;
+
+.contacts {
+  background: $ContactsBackground;
+
+  padding-top: 2em;
+  &__container {
+    &__email {
+      @include typography($EmailColor, 32px);
+      display: block;
+      height: 100%;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-top:.2em;
+      padding-bottom: .2em;
+      background: $EmailBackground;
+      text-align: center;
+
+      -moz-transition: all .1s ease-in;
+      -o-transition: all .1s ease-in;
+      -webkit-transition: all .1s ease-in;
+      transition: all .1s ease-in;
+
+      &:active, &:focus, &:visited {
+        color: $EmailColor !important;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: $EmailHoverBackgroundColor !important;
+        color: $EmailHoverColor !important;
+        text-decoration: none;
+      }
+    }
+
+    &__phone {
+      @include typography($ContactsColor, 24px);
+      text-align: center;
+      width: 100%;
+    }
+
+    &__paragraph {
+      @include typography($ContactsColor, 18px);
+      width: 70%;
+      margin-left:auto;
+      margin-right: auto;
+      margin-top: 1em;
+    }
+
+    &__copyright {
+      @include typography($ContactsColor, 12px);
+      text-align: center;
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 3em;
+    }
+  }
+}
